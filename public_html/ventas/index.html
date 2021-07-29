@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Libros Silvestres</title>
+
+     <link rel="stylesheet" type="text/css" href="../estilosindex.css">
+
+  </head>
+  <body>
+    <header class="contenedor">
+        <div class="center">
+          <img class="titulo" src="../isotipo.png" alt="">
+          <div class="botonera">
+            <input class="boton boton_botonera" type="button" name="button"   value="Vender"       onclick="location.href='../vender/index.html'">
+            <input class="boton boton_botonera" type="button" name="libros"   value="Catalogo"     onclick="location.href='../catalogo/index.html'">
+            <input class="boton boton_botonera" type="button" name="ventas"   value="Ver ventas"    onclick="location.href='index.html'">
+            <input class="boton boton_botonera" type="button" name="facturas" value="Ver facturas" onclick="location.href='../facturas/index.html'">
+          </div>
+        </div>
+    </header>
+
+    <div class="contenedor buscador">
+
+
+    <div class="busqueda">
+      <input type="text" name="busqueda" value="" id="barra_busqueda">
+      <input class="boton" type="button" name="buscar" value="buscar" id="buscar">
+    </div>
+
+    <div class="busqueda">
+      <label id="date_selector" for="date_start"></label>
+      <label id="date_selector" for="date_final"></label>
+      <span>Desde:</span><input type="date" id="date_start" name="trip-start"
+             min="2020-12-2" max="2032-12-31"><br>
+    </div>
+    <div class="">
+      <span>Hasta:</span><input  type="date" id="date_final" name="trip-start"
+             min="2018-12-2" max="2032-12-31">
+    </div>
+
+    </div><div
+     class="contenedor contenedor_tablas">
+     <div class="vertical-center">
+       <h2 class="titulo">VENTAS</h2>
+        <table id="tabla">
+
+        </table>
+     </div>
+    </div>
+
+    <script type="text/javascript" src="../jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../funciones.js"></script>
+    <script type="text/javascript" src="ventas.js"></script>
+  </body>
+</html>

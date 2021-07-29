@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Libros silvestres</title>
+
+     <link rel="stylesheet" type="text/css" href="../estilosindex.css">
+
+     <style media="screen">
+       .lateral{
+         background: #75b79e;
+         vertical-align: top;
+         height: 650px;
+         width: 30%;
+         text-align: center;
+         box-shadow: 0 4px 0 0 rgba(12, 12, 13, 0.2), 0 0 4px 0 rgba(0, 0, 0, 0.15);
+       }
+       .contenedor_tablas{
+         width: 70%;
+       }
+       .formulario{
+         padding: 0px;
+         margin-top: 30px;
+         width: 100%;
+       }
+       .bloque{
+         border: solid 1px var(--newtab-search-border-color);
+         background: #ccc;
+         width: 100%;
+         padding: 0px 3px 10px 3px;
+         margin-top: 10px;
+         border-radius: 3px 3px 3px 3px;
+         box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15);
+       }
+       .propiedades{
+         display: inline-block;
+         width: 100px;
+         margin-right: 20px;
+       }
+       .titulos_libros{
+         display: inline-block;
+         font-size: 16px;
+         margin-bottom: 10px;
+         width: 100%;
+       }
+       .label{
+         position: relative;
+         right: 0px;
+         width: 150px;
+
+       }
+     </style>
+
+  </head>
+  <body>
+    <header class="contenedor">
+        <div class="center">
+          <img class="titulo" src="../isotipo.png" alt="">
+          <div class="botonera">
+            <input class="boton boton_botonera" type="button" name="button"   value="Vender"        onclick="location.href='index.html'">
+            <input class="boton boton_botonera" type="button" name="libros"   value="Catalogo"     onclick="location.href='../catalogo/index.html'">
+            <input class="boton boton_botonera" type="button" name="ventas"   value="Ver ventas"   onclick="location.href='../ventas/index.html'">
+            <input class="boton boton_botonera" type="button" name="facturas" value="Ver facturas" onclick="location.href='../facturas/index.html'">
+          </div>
+        </div>
+    </header>
+
+    <div class="contenedor lateral">
+      <div class="vertical-center">
+      <div class="busqueda">
+        <input type="text" name="busqueda" value="" id="barra_busqueda">
+        <input class="boton" type="button" name="buscar" value="buscar" id="buscar">
+      </div>
+
+      <div class="contenedor formulario">
+        <div id="agregar">
+        </div>
+
+        <div class="bloque" id="bloque">
+          <br><span class="propiedades">Descuento:</span><input  class="label" type="text" name="descuento" value="">
+          <br><span class="propiedades">Nombre:</span><input class="label" type="text" name="nombre" value="">
+          <br><span class="propiedades">Cuil:</span><input class="label" type="text" name="cuil" value="">
+          <br><span class="propiedades">Email:</span><input  class="label" type="text" name="email" value="">
+          <select class="boton" name="formaPago">
+            <option value="tarjeta">tarjeta</option>
+            <option value="efectivo">efectivo</option>
+          </select>
+          <br><br><input style="width:200px" class="boton" type="submit" name="vender" value="Vender">
+        </div>
+
+      </div><br>
+    </div>
+    </div><div
+     class="contenedor contenedor_tablas">
+     <div class="vertical-center">
+       <h2 class="titulo">VENDER</h2>
+        <table id="tabla">
+
+        </table>
+     </div>
+    </div>
+
+    <script type="text/javascript" src="../jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../funciones.js"></script>
+    <script type="text/javascript" src="vender.js"></script>
+
+  </body>
+</html>

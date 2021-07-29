@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Libros Silvestres</title>
+
+     <link rel="stylesheet" type="text/css" href="estilosindex.css">
+
+  </head>
+  <body>
+    <header class="contenedor">
+        <div class="center">
+          <img class="titulo" src="isotipo.png" alt="">
+          <div class="botonera">
+            <input class="boton boton_botonera" type="button" value="Vender" name="button" onclick="location.href='vender/index.html'">
+            <input class="boton boton_botonera" type="button" id="libros"   name="libros" onclick="location.href='catalogo/index.html'" value="Catalogo">
+            <input class="boton boton_botonera" type="button" id="ventas"   name="ventas"  onclick="location.href='ventas/index.html'"value="Ver ventas">
+            <input class="boton boton_botonera" type="button" id="facturas" name="facturas"  onclick="location.href='facturas/index.html'"value="Ver facturas">
+          </div>
+        </div>
+    </header>
+
+    <div class="contenedor buscador">
+
+
+    <div class="busqueda">
+      <input type="text" name="busqueda" value="" id="barra_busqueda">
+      <input class="boton" type="button" name="buscar" value="buscar" id="buscar">
+    </div>
+
+    <div class="busqueda">
+      <label id="date_selector" for="date_start"></label>
+      <label id="date_selector" for="date_final"></label>
+      <span>Desde:</span><input type="date" id="date_start" name="trip-start"
+             min="2020-12-2" max="2032-12-31"><br>
+    </div>
+    <div class="">
+      <span>Hasta:</span><input  type="date" id="date_final" name="trip-start"
+             min="2018-12-2" max="2032-12-31">
+    </div>
+
+    </div><div
+     class="contenedor contenedor_tablas">
+      <table id="tabla">
+
+      </table>
+    </div>
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="funciones.js"></script>
+  </body>
+</html>
